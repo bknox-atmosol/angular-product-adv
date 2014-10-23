@@ -12,6 +12,9 @@ var path = "assets/js/";
 
 $script.ready('app',function(){
   //Load any app scripts here.
+  //  $script([path+'controllers/main.js'], function(){
+      angular.bootstrap(document,['app']);
+  //  });
 });
 
 $script.ready('ngScripts',function(){
@@ -28,4 +31,3 @@ $script.ready('ngCore',function(){
 });
 
 $script(path+'core/angular.min.js','ngCore');
-
