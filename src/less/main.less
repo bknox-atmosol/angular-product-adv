@@ -1,0 +1,51 @@
+html,body {
+  height: 100%;
+}
+body {
+  background: url('../imgs/diamond_upholstery.png');
+}
+#wrapper {
+  .container;
+
+  h1 {
+    .row;
+  }
+
+  section {
+    .row;
+    text-align: center;
+    .listings {
+      background: #FFF;
+      border: 1px solid #AAA;
+      padding: 10px 0 0 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      .pagination {
+        display: inline-block;
+      }
+      .img {
+        display: inline-block;
+        background: #CCC;
+        border: 1px solid #AAA;
+        width: 160px;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 3px;
+        vertical-align: top;
+        cursor: pointer;
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
+
+}
+
+@media (min-width: @screen-md-min) {
+  #wrapper section {
+    text-align: left;
+    .listings {
+      width: 353px;
+      border-radius: 5px;
+    }
+  }
+}

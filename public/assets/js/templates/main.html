@@ -1,0 +1,11 @@
+<pagination total-items="data.totalResults" ng-model="currentPage" ng-change="pageChanged()"></pagination>
+<div ng-show="loading">loading...</div>
+<div class="results" ng-show="!loading">
+  <div class="listings">
+    <div class="img" ng-repeat="item in data.models.Items.Item">
+      <img ng-click="showContent(item)" ng-src="{{ getImg(item) }}" />
+    </div>
+  </div><!-- .listings -->
+  <div class="reviews">
+  </div><!-- .reviews -->
+</div><!-- .results -->

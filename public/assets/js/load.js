@@ -12,9 +12,14 @@ var path = "assets/js/";
 
 $script.ready('app',function(){
   //Load any app scripts here.
-  //  $script([path+'controllers/main.js'], function(){
-      angular.bootstrap(document,['app']);
-  //  });
+  $script([
+    path+'utils/lodash-addon.js',
+    path+'models/data.js',
+    path+'core/config.js',
+    path+'controllers/main.js'
+   ], function(){
+    angular.bootstrap(document,['app']);
+  });
 });
 
 $script.ready('ngScripts',function(){
@@ -23,6 +28,7 @@ $script.ready('ngScripts',function(){
 
 $script.ready('ngCore',function(){
   $script([
+    path+'utils/lodash.compat.min.js',
     path+'core/angular-sanitize.min.js',
     path+'core/angular-route.min.js',
     path+'core/ui-bootstrap.min.js'
